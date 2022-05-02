@@ -186,10 +186,10 @@ const salvarPuntaje = (user) => {
     if (elemento.nom_usuario === user) {
       indice = index;
       console.log(indice);
-      if (arrayUsuarios[indice].pntosCarrera === "N/A") {
-        arrayUsuarios[indice].pntosCarrera = puntaje;
-      } else if (arrayUsuarios[indice].pntosCarrera <= puntaje) {
-        arrayUsuarios[indice].pntosCarrera = puntaje;
+      if (arrayUsuarios[indice].pntosMemoria === "N/A") {
+        arrayUsuarios[indice].pntosMemoria = puntaje;
+      } else if (arrayUsuarios[indice].pntosMemoria <= puntaje) {
+        arrayUsuarios[indice].pntosMemoria = puntaje;
       }
 
       //arrayUsuarios[indice].pntosMemoria = 20;

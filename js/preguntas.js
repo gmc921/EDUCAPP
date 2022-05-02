@@ -334,10 +334,10 @@ const salvarPuntaje = (user) => {
     if (elemento.nom_usuario === user) {
       indice = index;
       //console.log(indice);
-      if (arrayUsuarios[indice].pntosMemoria === "N/A") {
-        arrayUsuarios[indice].pntosMemoria = preguntas_correctas;
-      } else if (arrayUsuarios[indice].pntosMemoria <= preguntas_correctas) {
-        arrayUsuarios[indice].pntosMemoria = preguntas_correctas;
+      if (arrayUsuarios[indice].pntosCarrera === "N/A") {
+        arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
+      } else if (arrayUsuarios[indice].pntosCarrera <= preguntas_correctas) {
+        arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
       }
 
       //arrayUsuarios[indice].pntosMemoria = 20;
