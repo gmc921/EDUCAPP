@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>EDUCAPP</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/estilo_menu.css" />
+
+</head>
+
+<body>
+  <!-- <a href="https://google.com" target="_blank"> click aqui</a>  abrir enlace en una ventana aparte -->
+
+  <header class="caja-nav">
+    <div class="div_encabezado-img">
+      <img src="img/Logo_de_la_UJAT.svg" alt="">
+    </div>
+    <div class="div_navegacion">
+      <h1 class="encabezado"><b>EDUCAPP</b></h1>
+      <!-- <h1 class="encabezado-2"><b>UJAT</b></h1> -->
+      <!-- </div>	 -->
+      <nav class="nav">
+        <a class="nav-menu" href="form_menu_usuario.html">Menú usuario</a>
+        <a class="nav-conTematico" href="form_conTematico.html">Contenido temático</a>
+        <a class="nav-cerrarSesion" href="index.html">Cerrar sesión</a>
+      </nav>
+    </div>
+    <div class="div_encabezado-img-dacity">
+      <img src="img/logo-dacyti.png" alt="">
+    </div>
+  </header>
+
+  <article class="grid-container">
+    <section class="section-info">
+      <div class="section-info__div">
+        <h2 class="section-info__div-h2">Información de usuario</h2>
+      </div>
+      <div class="caja-img">
+        <img class="caja-img__icono" src="img/rafael.png" alt="login" />
+      </div>
+      <div class="div-nick" id="datos">
+        <!-- <p>Nickname:<b>nombre</b></p>
+        <p></p> -->
+      </div>
+    </section>
+
+    <section class="section-acciones">
+      <div class="section-info__div">
+        <h2 class="section-info__div-h2">Acciones</h2>
+      </div>
+
+      <div class="div_forms-inputs">
+        <form class="form_inputs" action="form_conTematico.html">
+          <div class="inputs">
+            <div class="div-icon">
+              <img src="/img/books.png" alt="">
+            </div>
+            <button class="btn" type="submit" name="" /><a>Contenido temático</a></button>
+            <!-- <input > -->
+          </div>
+        </form>
+        <form class="form_inputs" action="form_menu_usuario2.html">
+          <div class="inputs">
+            <div class="div-icon">
+              <img src="/img/computer-game.png" alt="">
+            </div>
+            <button class="btn" type="submit" name="" /><a>Juegos</a></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
+  <script src="/js/usuario.js"></script>
+</body>
+
+</html>

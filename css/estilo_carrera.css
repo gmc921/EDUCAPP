@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  /*background-color: # f5deb3;
+  background: #80808078;
+  background: #89c4ff;//azul bajito
+  */
+  background: radial-gradient(#f5deb3, #6cc0c0);
+  /* border: 5px solid rgb(216, 12, 12); */
+  overflow: auto;
+}
+
+/*<------------------------------Nav bar------------------------------------------------------------------------------>*/
+.caja-nav {
+  background: linear-gradient(#70b6fc, #99ccff);
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(100px, 250px) minmax(200px, 1fr) minmax(100px, 250px);
+  grid-template-rows: repeat(2, 40px);
+  grid-template-areas:
+    "logo letra dacity"
+    "logo letra dacity";
+  grid-gap: 10px; 
+}
+
+.div_navegacion {
+  grid-area: letra;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.encabezado {
+  /* border: 2px solid blue; */
+  font-size: 1.65rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  letter-spacing: 5px;
+}
+
+/* .encabezado-2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+  letter-spacing: 10px;
+  display: none;
+} */
+
+.div_encabezado-img {
+  /* border: 2px solid cornsilk; */
+  grid-area: logo;
+}
+
+.div_encabezado-img-dacity {
+  /* border: 2px solid cornsilk; */
+  grid-area: dacity;
+}
+
+.img-logos {
+  height: 100%;
+  width: 75%;
+  object-fit: cover;
+}
+.nav-menu,
+.nav-conTematico,
+.nav-cerrarSesion {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  padding: 3px;
+  margin: auto 10px;
+  border-radius: 6.5px;
+}
+.nav-menu:hover,
+.nav-conTematico:hover,
+.nav-cerrarSesion:hover {
+  background: linear-gradient(#6fe66f, #b9fab9);
+  opacity: 0.85;
+}
+
+/*<------------------------------Section_PUNTAJE------------------------------------------------------------------------------>*/
+.section_puntaje {
+  
+  min-width: auto;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  /*height: 4.9vh;*/
+}
+
+.puntajeAcertado,
+.puntajeErroneo {
+  display: inline-block;
+  /* padding-right: 10rem; */
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-family: "Roboto Slab", serif;
+  font-style: oblique;
+  text-shadow: 3px 3px rgb(151, 151, 151);
+  color: #404040;
+}
+/*<------------------------------Article------------------------------------------------------------------------------>*/
+.container {
+  display: flex;
+  /* justify-content: center;
+  align-items: flex-start; */
+  height: 84vh;
+  width: 86vw;
+  /* min-width: 925px; ?minimo del contenedor-ajustar arboles, coche, preguntas */
+  margin: auto;
+}
+/*<------------------------------Section_TRIBUNA------------------------------------------------------------------------------>*/
+.section-tribuna {
+  width: 12rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/*<------------------------------Section_PISTA------------------------------------------------------------------------------>*/
+.section_pista {
+  
+  display: flex;
+  position: relative;
+  background-color: #33a839b9;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/*<-----------------------------Arboles Izquierda------------------------------------>*/
+.section_pista-contenido {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-self: center;
+  left: 6.5vw;
+  right: 6vw;
+  /*min-width: 562.533px;  
+  min-height: 245.65px;  */
+}
+
+.div_img_arboles {
+  flex-basis: 6vw;
+  max-width: 100px;
+  min-width: 64.6167px;
+  min-height: 245.65px;
+}
+
+.arbol_izquierda,
+.arbol_derecha {
+  margin-top: 2vh;
+}
+
+/*<------------------------------DIV COCHE------------------------------------------------------------------------------>*/
+.div_coche {
+  display: flex;
+  position: absolute;
+  align-self: center;
+  width: 3.5vw;
+  /*!  min-width: 37.6833px;*/
+  height: 6vw;
+   /*! min-height: 64.6167px;*/
+  top: 10vw;
+  left: 1.5vw;
+  transform: rotate(0deg);
+  transition-property: top, left, right, bottom, transform;
+  transition-duration: 1.5s;
+}
+/*<------------------------------Section_Preguntas------------------------------------------------------------------------------>*/
+
+.section_preguntas {
+  width: 100%;
+  min-width: 558.533; /**/
+  height: 20vw;
+  min-height: 210.8px; /**/
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.section_preg-divEncabezado {
+  position: relative;
+  background: #fff;
+  width: 77%;
+  min-width: 410.883px;
+  padding: 10px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.dificultad { 
+  opacity: 0.5;
+  text-align: left;
+}
+
+.numero{
+  position: absolute;
+  opacity:0.3;
+  top: 10px;
+  right: 10px;
+}
+
+.pregunta {
+  padding: 8px;
+  min-width: 394.883px;
+}
+
+/***************DIV-BOTONES*********************************************************/
+.div-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+  min-width: 366.067px;
+}
+
+.btnR {
+  display: flex;
+  position: relative;
+  background: #fff;
+  width: 33vw;
+  min-width: 333.417px;
+  height: 3vw;
+  min-height: 12.1167px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  /*background: linear-gradient(#99e599, #60e460);*/
+}
+
+.btnR:hover {
+  transform: scale(1.05);
+  transition: transform 0.25s;
+}
+
+#div_btn_oculto {
+  display: inline-flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  display: none;
+  text-align: center;
+}
+
+.div_msj {
+  position: relative;
+  font-weight: 400;
+  width: 40vw;
+  padding: 10px;
+  align-self: center;
+  border-radius: 10px;
+}
+/******************VENTANA EMERGENTE*********************************************************************************************************/
+
+.container_msj {
+  background-color: #edeef6;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  /* z-index: 100; */
+}
+.btn {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.section_contenedor {
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(0, 0, 0, 0.247);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.mostrar {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.div-contenedor {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+.img-msj {
+  margin: 30px 5px;
+  width: 100px;
+}
+.ocultar-estrella {
+  opacity: 0.35;
+}
+/*! ***************RESPONSIVE DESIGN***************************************************************/
+@media screen and (max-width: 1050px) {
+
+  /* .encabezado {
+    display: none;
+  }
+
+  .encabezado-2 {
+    display: block;
+  } */
+
+  .nav-menu,
+  .nav-conTematico,
+  .nav-cerrarSesion {
+    font-size: 1.1rem;
+    padding: 0;
+    text-decoration: none;
+    margin: 0;
+    border-radius: 6.5px;
+  }
+
+  .div_img_arboles{
+    display: none;
+  }
+
+  .section_pista,
+  .section-tribuna{
+    margin-top: 20px;
+  }
+
+  .section_preguntas{
+    top: 210px;
+  }
+
+}
+

@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(#99d5df, #619191);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* !BARRA DE NAVEGACIÓN******************************************************************************************/
+.caja-nav {
+  background: linear-gradient(#70b6fc, #99ccff);
+  padding: 5px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(100px, 250px) minmax(200px, 1fr) minmax(100px, 250px);
+  grid-template-rows: repeat(2, 40px);
+  grid-template-areas:
+      "logo letra dacity"
+      "logo letra dacity";
+  grid-gap: 10px;
+}
+
+.div_navegacion{
+  grid-area: letra;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.encabezado {
+  /* border: 2px solid blue; */
+  font-size: 1.65rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  letter-spacing: 5px;
+}
+
+.encabezado-2{
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  letter-spacing: 5px;
+  display: none;
+}
+
+.div_encabezado-img {
+  /* border: 2px solid cornsilk; */
+  grid-area: logo;
+}
+.div_encabezado-img-dacity {
+  /* border: 2px solid cornsilk; */
+  grid-area: dacity;
+}
+
+.img-logos {
+  height: 100%;
+  width: 75%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 973px) {
+  
+  .encabezado{
+      display: none;
+  }
+  .encabezado-2{
+      display: block;
+  }
+
+}
+
+/*<------------------------------Fin estilos encabezado------------------------------------------------------------------------------>*/
+article {
+  overflow: auto;
+  display: flex;
+  margin: auto;
+}
+
+.caja-principal {
+  display: flex;
+  background: radial-gradient(#dde, #eee);
+  border: 2px solid #d3d3d3;
+  width: 50vw;
+  max-width: 940px;
+  min-width: 400px;
+  height: 50vh;
+  max-height: 500px;
+  min-height: 290px;
+  /*max-width: 40rem;*/
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.caja-titulo {
+  background: rgba(0, 0, 0, 0.07);
+  /*border: 2px solid #f00;*/
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 0 15px;
+}
+
+h2.caja-titulo__h2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-style: oblique;
+  align-self: center;
+}
+
+.caja-img {
+  padding: 1px;
+  align-self: center;
+  width: 200px;
+  height: 16vh;
+  max-height: 150px;
+  min-height: 70px;
+  /*text-align: center;
+  border: 2px solid red;
+  margin: 30px 30px 15px;
+  */
+  /*line-height: 150%;*/
+}
+
+.caja-img__icono {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*<------------------------------Inician formularios------------------------------------------------------------------------------>*/
+.caja-usuario,
+.caja-pass,
+.caja-confirmPass,
+.caja-btn  {
+  text-align: center;
+}
+
+.caja-usuario_input--text,
+.caja-pass_input--pass {
+  width: 20vw;
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 4vh;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.caja-btn_input--submit {
+  cursor: pointer;
+  max-width: 400px;
+  width: 10vw;
+  min-width: 166px;
+  min-height: 3vh;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ccc;
+}
+
+.caja-btn_input--submit:hover {
+  background: #90ee90;
+}
+
+/* .caja-pass {
+  text-align: center;
+}
+
+.caja-pass_input--pass {
+  width: 20vw;
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 4vh;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.caja-confirmPass {
+  text-align: center;
+}
+
+.caja-pass_input--confirmPass {
+  width: 20vw;
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 4vh;
+  text-align: center;
+  border-radius: 8px;
+} */
+
+/* .caja-btn {
+  margin: 20px 15px 10px;
+  padding: 10px;
+  text-align: center;
+} */
+
+

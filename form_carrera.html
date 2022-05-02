@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>QuizRace</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/estilo_carrera.css" />
+</head>
+
+<body>
+  <!-- <a href="https://google.com" target="_blank"> click aqui</a>  abrir enlace en una ventana aparte -->
+
+  <header class="caja-nav">
+    <div class="div_encabezado-img">
+      <img class="img-logos" src="img/Logo_de_la_UJAT.svg" alt="">
+    </div>
+    <div class="div_navegacion">
+      <h1 class="encabezado"><b>EDUCAPP</b></h1>
+      <!-- <h1 class="encabezado-2"><b>UJAT</b></h1> -->
+      <!-- </div>	 -->
+      <nav class="nav">
+        <a class="nav-menu" href="form_menu_usuario.html">Menú usuario</a>
+        <a class="nav-conTematico" href="form_conTematico.html">Contenido temático</a>
+        <a class="nav-cerrarSesion" href="index.html">Cerrar sesión</a>
+      </nav>
+    </div>
+    <div class="div_encabezado-img-dacity">
+      <img class="img-logos" src="img/logo-dacyti.png" alt="">
+    </div>
+  </header>
+
+  <section class="section_puntaje">
+    <div class="puntajeAcertado" id="puntajeAcertado"></div>
+    <div class="puntajeErroneo" id="puntajeErroneo"></div>
+  </section>
+
+  <article class="container">
+    <section class="section-tribuna">
+      <img class="img-tribuna" src="img/juego_carrera/estadioLeft.png" />
+      <img class="img-tribuna" src="img/juego_carrera/estadioLeft.png" />
+    </section>
+    <!----------------------------------------------------------------------------------------------------------->
+    <section class="section_pista">
+      <img src="img/juego_carrera/Imagen1.png" />
+
+      <div class="div_coche" id="img-coche-mov">
+        <img class="div_img-coche" src="img/juego_carrera/coche.png" />
+      </div>
+
+      <section class="section_pista-contenido">
+        <div class="div_img_arboles">
+          <img class="arbol_izquierda" src="img/juego_carrera/arbol.png" />
+          <img class="arbol_izquierda" src="img/juego_carrera/arbol.png" />
+          <img class="arbol_izquierda" src="img/juego_carrera/arbol.png" />
+        </div>
+        <!--</section>-->
+
+        <!--<section class="section_rigth">-->
+        <div class="div_img_arboles">
+          <img class="arbol_derecha" src="img/juego_carrera/arbol.png" />
+          <img class="arbol_derecha" src="img/juego_carrera/arbol.png" />
+          <img class="arbol_derecha" src="img/juego_carrera/arbol.png" />
+        </div>
+
+        <!----------------------------------------------------------------------------------------------------------->
+        <section class="section_preguntas">
+          <div class="section_preg-divEncabezado" id="pregunta-encabezado">
+            <div class="dificultad" id="dificultad"></div>
+            <div class="numero" id="numero"></div>
+            <div class="pregunta" id="pregunta"></div>
+          </div>
+          <div class="div-botones" id="div_botones">
+            <div class="btnR" id="btn1" onclick="oprimir_btn(0)"></div>
+            <div class="btnR" id="btn2" onclick="oprimir_btn(1)"></div>
+            <div class="btnR" id="btn3" onclick="oprimir_btn(2)"></div>
+            <div class="btnR" id="btn4" onclick="oprimir_btn(3)"></div>
+          </div>
+          <div id="div_btn_oculto">
+            <div class="div_msj" id="div_msj_oculto"></div>
+            <div class="btnR" id="btn5" onclick="VolverJugar()"></div>
+          </div>
+        </section>
+        <!---termina section (section_preguntas)---->
+        <!----------------------------------------------------------------------------------------------------------->
+        <article class="container_msj">
+          <!-- <button class="btn" id="btn_abrir">Hacer Click</button> -->
+
+          <section id="section_contenedor-ganaste" class="section_contenedor">
+            <div class="div-contenedor">
+              <h1 id="modal_h1-g"></h1>
+              <div class="caja_img"></div>
+              <img class="img-msj" id="img-estrella-1" src="img/estrella.png" alt="" />
+              <img class="img-msj" id="img-estrella-2" src="img/estrella.png" alt="" />
+              <img class="img-msj" id="img-estrella-3" src="img/estrella.png" alt="" />
+              <p id="p_msj-g"></p>
+              <button class="btn" id="btn_cerrar">Cerrar</button>
+            </div>
+          </section>
+
+          <section id="section_contenedor-perdiste" class="section_contenedor">
+            <div class="div-contenedor">
+              <h1 id="modal_h1-p"></h1>
+              <div class="caja_img"></div>
+              <img class="img-msj" id="img-sad" src="img/cry.png" alt="" />
+              <p id="p_msj-p"></p>
+              <button class="btn" id="btn_cerrar2">Cerrar</button>
+            </div>
+          </section>
+        </article>
+      </section>
+      <!---termina section (section_pista-contenido)---->
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------->
+    <section class="section-tribuna">
+      <img class="img-tribuna" src="img/juego_carrera/estadioRight.png" />
+      <img class="img-tribuna" src="img/juego_carrera/estadioRight.png" />
+    </section>
+  </article>
+
+  <script src="js/preguntas.js"></script>
+</body>
+
+</html>

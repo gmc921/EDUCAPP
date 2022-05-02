@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>EDUCAPP</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/estilo_menu.css" />
+</head>
+
+<body>
+
+  <article class="container_msj">
+    <section class="section_msj" id="section_contenedor">
+      <div class="div-contenedor">
+        <video class="vid" id="vid_instrucciones" controls>
+        </video>
+        <button class="btn-modal" id="btn_cerrar">Continuar</button>
+      </div>
+    </section>
+  </article>
+
+  <header class="caja-nav">
+    <div class="div_encabezado-img">
+      <img src="img/Logo_de_la_UJAT.svg" alt="">
+    </div>
+    <div class="div_navegacion">
+      <h1 class="encabezado"><b>EDUCAPP</b></h1>
+      <!-- <h1 class="encabezado-2"><b>UJAT</b></h1> -->
+      <!-- </div>	 -->
+      <nav class="nav">
+        <a class="nav-menu" href="form_menu_usuario.html">Menú usuario</a>
+        <a class="nav-conTematico" href="form_conTematico.html">Contenido temático</a>
+        <a class="nav-cerrarSesion" href="index.html">Cerrar sesión</a>
+      </nav>
+    </div>
+    <div class="div_encabezado-img-dacity">
+      <img src="img/logo-dacyti.png" alt="">
+    </div>
+  </header>
+
+  <article class="grid-container">
+    <section class="section-info">
+      <div class="section-info__div">
+        <h2 class="section-info__div-h2">Información de usuario</h2>
+      </div>
+      <div class="caja-img">
+        <img class="caja-img__icono" src="img/rafael.png" alt="login" />
+      </div>
+      <div class="div-nick" id="datos">
+      </div>
+    </section>
+
+    <section class="section-acciones">
+      <div class="section-info__div">
+        <h2 class="section-info__div-h2">Tipo de juego</h2>
+      </div>
+
+      <section class="formulario">
+        <div class="div_forms-radio">
+
+          <div class="inputs">
+            <div class="div-icon">
+              <img src="/img/coche.png" alt="">
+            </div>
+            <div>
+              <label class="input-juego-1"><input id="input-quiz" type="radio" type="submit" name="tipo_juego"
+                  value="quiz">QuizRace</label>
+            </div>
+          </div>
+
+          <div class="inputs">
+            <div class="div-icon">
+              <img src="/img/memoria.png" alt="">
+            </div>
+            <div>
+              <label class="input-juego-1"><input id="input-memoria" type="radio" type="submit" name="tipo_juego"
+                  value="memorama">Memorama</label>
+            </div>
+          </div>
+
+        </div>
+        <div class="btn-submit">
+          <input class="btn" id="btn-jugar" type="submit" name="empezar" value="jugar" />
+        </div>
+      </section>
+    </section>
+  </article>
+  <script src="/js/usuario.js"></script>
+</body>
+
+</html>

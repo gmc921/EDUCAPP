@@ -1,0 +1,212 @@
+[
+    {
+        "dificultad": "dificil",
+        "pregunta": "¿A partir del congreso de Chilpancingo, con que nombre se le conoció a Morelos?",
+        "respuesta": "Siervo de la nación",
+        "incorrecta1": "Alteza Enterísima",
+        "incorrecta2": "Siervo del Estado",
+        "incorrecta3": "Alteza de la Nación"
+    },
+    {
+        "dificultad": "dificil",
+        "pregunta": "¿Lugar y fecha en que fue fusilado Morelos?",
+        "respuesta": "San Cristóbal Ecatepec el 22 de diciembre de 1815",
+        "incorrecta1": "Veracruz el 22 de diciembre de 1815",
+        "incorrecta2": "San Cristóbal Ecatepec el 20 de septiembre de 1815",
+        "incorrecta3": "Veracruz el 20 de septiembre de 1815"
+    },
+    {
+        "dificultad": "dificil",
+        "pregunta": "¿Que fue la guerra de guerrillas?",
+        "respuesta": "Era un conjunto de estrategias que pretendía desorganizar al ejército realista",
+        "incorrecta1": "Pequeñas batallas dispersadas",
+        "incorrecta2": "Nombre con el que se le conoce a un enfrentamiento popular en la Ciudad de Jalisco",
+        "incorrecta3": "Todas son correctas\r"
+    },
+    {
+        "dificultad": "dificil",
+        "pregunta": "¿Cuál de las siguientes ideas formó parte del pensamiento de José María Morelos y Pavón?",
+        "respuesta": "La unión general entre europeos, americanos e indígenas",
+        "incorrecta1": "La independencia de la América mexicana",
+        "incorrecta2": "El establecimiento de un gobierno monárquico",
+        "incorrecta3": "Todas son correctas\r"
+    },
+    {
+        "dificultad": "dificil",
+        "pregunta": "¿Que personaje de la Independencia de México decreto la abolición de la esclavitud?",
+        "respuesta": "Ignacio Allende",
+        "incorrecta1": "Leona Vicario",
+        "incorrecta2": "Miguel Hidalgo",
+        "incorrecta3": "Morelos\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Que estados actuales comprenden la región del bajío donde comenzó el movimiento de independencia?",
+        "respuesta": "Guanajuato, Querétaro, Michoacán y Jalisco",
+        "incorrecta1": "Oaxaca, Veracruz, Ciudad de México",
+        "incorrecta2": "Guanajuato, Oaxaca, Jalisco",
+        "incorrecta3": "Jalisco, Veracruz, Michoacán\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Ciudad y año en que se organizo la conspiración de independencia?",
+        "respuesta": "1810 en la ciudad de Querétaro",
+        "incorrecta1": "1811 en la Ciudad de México",
+        "incorrecta2": "1810 en la Ciudad de Jalisco",
+        "incorrecta3": "1809 en la Ciudad de Querétaro\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Quien fue el responsable y en que Fecha se convoco a la gente del pueblo de Dolores?",
+        "respuesta": "Miguel Hidalgo el 16 de septiembre de 1810",
+        "incorrecta1": "Ignacio Allende el 16 de septiembre de 1810",
+        "incorrecta2": "Ignacio Allende el 18 de Octubre de 1811",
+        "incorrecta3": "Miguel Hidalgo el 18 de Noviembre de 1810\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Fecha que se dio el fusilamiento de Miguel Hidalgo?",
+        "respuesta": "30 julio de 1811",
+        "incorrecta1": "20 de Enero de 1811",
+        "incorrecta2": "14 de Mayo de 1811",
+        "incorrecta3": "20 de Julio de 1811\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿A partir de que año Morelos destaco como líder insurgente?",
+        "respuesta": "1812",
+        "incorrecta1": "1810",
+        "incorrecta2": "1813",
+        "incorrecta3": "1811\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Periodo que comprendió el movimiento de independencia?",
+        "respuesta": "1810 a 1821",
+        "incorrecta1": "1811 a 1821",
+        "incorrecta2": "1810 a 1824",
+        "incorrecta3": "1815 a 1819\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Región donde comenzó el movimiento de independencia?",
+        "respuesta": "región del bajío",
+        "incorrecta1": "región del norte",
+        "incorrecta2": "Querétaro",
+        "incorrecta3": "Oaxaca y zonas centrales del país\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Quienes fueron sus principales lideres?",
+        "respuesta": "Miguel Hidalgo y Costilla e Ignacio Allende",
+        "incorrecta1": "Miguel Hidalgo, Josefa Ortiz de Domínguez",
+        "incorrecta2": "Jose María Morelos",
+        "incorrecta3": "Vicente Guerrero y Guadalupe Victoria\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Tras la muerte de los primeros lideres, quien organizó y dirigió un ejército que logró dominar una amplia zona del centro y sur de Nueva España?",
+        "respuesta": "Jose Maria Morelos y Pavón",
+        "incorrecta1": "Miguel Hidalgo y Costilla",
+        "incorrecta2": "Josefa Ortiz de Domínguez",
+        "incorrecta3": "Ignacio Allende\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Año en que se consumo el movimiento de independencia?",
+        "respuesta": "1821",
+        "incorrecta1": "1822",
+        "incorrecta2": "1819",
+        "incorrecta3": "1823\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿A quienes se les denomina criollos?",
+        "respuesta": "hijos de españoles nacidos en América",
+        "incorrecta1": "hijos de indigenas",
+        "incorrecta2": "La mezcla entre españoles e indígenas",
+        "incorrecta3": "Españoles nacidos en Europa\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "De acuerdo a la lectura, ¿en cuantas etapas se dividió el movimiento de independencia?",
+        "respuesta": "En cuatro etapas",
+        "incorrecta1": "En cinco etapas",
+        "incorrecta2": "En tres etapas",
+        "incorrecta3": "En seis etapas\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Quienes consideraban que la mejor forma de organización política era la republicana, en la que el gobierno se divide en tres poderes: ejecutivo, legislativo y judicial?",
+        "respuesta": "Los pensadores ilustrados",
+        "incorrecta1": "Los revolucionarios",
+        "incorrecta2": "Los insurgentes",
+        "incorrecta3": "Los españoles\r"
+    },
+    {
+        "dificultad": "Dificil",
+        "pregunta": "¿Cuales fueron algunas de las reformas Borbonicas que España aplico en territorios americanos?",
+        "respuesta": "Todas son correctas",
+        "incorrecta1": "El aumento del tributo a los indígenas, la creación de nuevos impuestos",
+        "incorrecta2": "La división del territorio en intendencias, la restricción de la autoridad del virrey",
+        "incorrecta3": "la reducción del número de criollos en la Real Audiencia y la disminución de órdenes religiosas\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Quienes fueron los principales impulsores del movimiento de independencia hacia principios del sigo XIX?",
+        "respuesta": "Los criollos",
+        "incorrecta1": "Los franceses",
+        "incorrecta2": "Los indígenas",
+        "incorrecta3": "Los españoles\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Ciudades que fueron cede de reuniones de los criollos para conspirar y derrocar al gobierno virreinal?",
+        "respuesta": "Puebla, San Luis Potosí, Celaya y el pueblo de Dolores en Guanajuato",
+        "incorrecta1": "San Luis Potosí, y el pueblo de Dolores en Guanajuato",
+        "incorrecta2": "Guadalajara, Puebla y Celaya",
+        "incorrecta3": "Ninguna es correcta\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Cuál fue la ciudad en donde Ignacio Allende estableció un cuartel?",
+        "respuesta": "San Miguel el Grande",
+        "incorrecta1": "Guadalajara",
+        "incorrecta2": "Puebla",
+        "incorrecta3": "Celaya\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Con cuantos aliados contaba Ignacio Allende y en que ciudades?",
+        "respuesta": "Tres mil aliados en la Ciudad de México, Celaya y Guanajuato",
+        "incorrecta1": "Mil aliados en la Ciudad de México y Guanajuato",
+        "incorrecta2": "Tres mil aliados en Celaya y Guanajuato",
+        "incorrecta3": "Dos mil aliados en la Ciudad de México y Celaya\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿Que personaje fue quien logro enviar un mensaje de advertencia a Ignacio Allende y Juan Aldama tras la denuncia de la conspiración?",
+        "respuesta": "Josefa Ortiz de Domínguez",
+        "incorrecta1": "Ninguna es correcta",
+        "incorrecta2": "Miguel Hidalgo y Costilla",
+        "incorrecta3": "José María Morelos y Pavón\r"
+    },
+    {
+        "dificultad": "Facil",
+        "pregunta": "¿En que estaba en contra Miguel Hidalgo?",
+        "respuesta": "De la esclavitud y de las desigualdades sociales",
+        "incorrecta1": "De las desigualdades socioeconómicas",
+        "incorrecta2": "De la esclavitud",
+        "incorrecta3": "Ninguna es correcta\r"
+    },
+    {
+        "dificultad": "Normal",
+        "pregunta": "¿Que planteaba Miguel Hidalgo para la Nueva España?",
+        "respuesta": "Que debía ser autónoma",
+        "incorrecta1": "Que debía ser controlada por el estado",
+        "incorrecta2": "Libre del virreinato",
+        "incorrecta3": "Todas son correctas\r"
+    }
+    
+]
+

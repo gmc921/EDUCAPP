@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Registrarse</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo_login.css">
+	<?php include("includes/conect.php"); ?>
+</head>
+
+<body>
+
+	<header class="caja-nav">
+		<div class="div_encabezado-img">
+			<img class="img-logos" src="img/Logo_de_la_UJAT.svg" alt="">
+		</div>
+
+		<div class="div_navegacion">
+			<h1 class="encabezado"><b>UNIVERSIDAD JUÁREZ AUTÓNOMA DE TABASCO</b></h1>
+			<h1 class="encabezado-2"><b>UJAT</b></h1>
+		</div>
+
+		<div class="div_encabezado-img-dacity">
+			<img class="img-logos" src="img/logo-dacyti.png" alt="">
+		</div>
+	</header>
+
+	<article>
+		<form id="form_registrar">
+			<section class="caja-principal">
+				<!--<div>  principal -->
+				<!-- php con mensaje en caso de mal inicio de sesion  -->
+
+				<div class="caja-titulo">
+					<h2 class="caja-titulo__h2">Registrarse</h2>
+				</div>
+
+				<div class="caja-img">
+					<img class="caja-img__icono" src="img/rafael.png" alt="login">
+				</div>
+				<div class="caja-usuario">
+					<input class="caja-usuario_input--text" type="text" required placeholder="Usuario">
+				</div>
+
+				<div class="caja-pass">
+					<input class="caja-pass_input--pass" id="pass" type="password" required placeholder="Constraseña">
+				</div>
+				<div class="caja-confirmPass">
+					<input class="caja-pass_input--pass" id="confirm_pass" type="password" required
+						placeholder="Constraseña">
+				</div>
+				<div class="caja-btn">
+					<input class="caja-btn_input--submit" type="submit" value="Registrarse">
+					<input class="caja-btn_input--submit" id="cancelar" type="button" value="Regresar">
+				</div>
+				<!--</div> principal -->
+			</section>
+		</form>
+
+
+	</article>
+	<script src="js/login.js"></script>
+</body>
+
+</html>

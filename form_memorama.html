@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Memorama</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo_memorama.css" />
+</head>
+
+<body>
+    <!-- <a href="https://google.com" target="_blank"> click aqui</a>  abrir enlace en una ventana aparte -->
+
+    <header class="caja-nav">
+        <div class="div_encabezado-img">
+            <img class="img-logos" src="img/Logo_de_la_UJAT.svg" alt="">
+        </div>
+        <div class="div_navegacion">
+            <h1 class="encabezado"><b>EDUCAPP</b></h1>
+            <!-- <h1 class="encabezado-2"><b>UJAT</b></h1> -->
+            <!-- </div>	 -->
+            <nav class="nav">
+                <a class="nav-menu" href="form_menu_usuario.html">Menú usuario</a>
+                <a class="nav-conTematico" href="form_conTematico.html">Contenido temático</a>
+                <a class="nav-cerrarSesion" href="index.html">Cerrar sesión</a>
+            </nav>
+        </div>
+        <div class="div_encabezado-img-dacity">
+            <img class="img-logos" src="img/logo-dacyti.png" alt="">
+        </div>
+    </header>
+
+    <article class="container">
+
+        <section class="section-puntaje">
+            <div class="section-puntaje-puntos" id="puntaje"></div>
+            <div class="section-puntaje-puntos" id="errores"></div>
+        </section>
+
+        <section class="section-tablero">
+            <div id="tablero"></div>
+            <br>
+            <div class="nuevo-juego" onclick="generarTablero()">Nuevo Juego</div>
+        </section>
+
+        <article class="container_msj">
+            <!-- <button class="btn" id="btn_abrir">Hacer Click</button> -->
+
+            <section id="section_contenedor-ganaste" class="section_contenedor">
+                <div class="div-contenedor">
+                    <h1 id="modal_h1"></h1>
+                    <div class="caja_img"></div>
+                    <img class="img-msj" id="img-estrella-1" src="img/estrella.png" alt="" />
+                    <img class="img-msj" id="img-estrella-2" src="img/estrella.png" alt="" />
+                    <img class="img-msj" id="img-estrella-3" src="img/estrella.png" alt="" />
+                    <p id="p_msj"></p>
+                    <button class="btn" id="btn_cerrar">Cerrar</button>
+                </div>
+            </section>
+
+            <section id="section_contenedor-perdiste" class="section_contenedor">
+                <div class="div-contenedor">
+                    <h1 id="modal_h1-p"></h1>
+                    <div class="caja_img"></div>
+                    <img class="img-msj" id="img-sad" src="img/cry.png" alt="" />
+                    <p id="p_msj-p"></p>
+                    <button class="btn" id="btn_cerrar2">Cerrar</button>
+                </div>
+            </section>
+        </article>
+
+    </article>
+
+    </article>
+    <script src="js/memorama.js"></script>
+</body>
+
+</html>
