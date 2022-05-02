@@ -107,11 +107,8 @@ body {
 /*<------------------------------Article------------------------------------------------------------------------------>*/
 .container {
   display: flex;
-  /* justify-content: center;
-  align-items: flex-start; */
   height: 84vh;
   width: 86vw;
-  /* min-width: 925px; ?minimo del contenedor-ajustar arboles, coche, preguntas */
   margin: auto;
 }
 /*<------------------------------Section_TRIBUNA------------------------------------------------------------------------------>*/
@@ -338,6 +335,9 @@ body {
   .encabezado-2 {
     display: block;
   } */
+  .btnR {
+    height: 6vw;
+  }
 
   .nav-menu,
   .nav-conTematico,

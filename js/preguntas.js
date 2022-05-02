@@ -44,6 +44,7 @@ let preguntas_correctas = 0;
 let preguntas_incorrectas = 0;
 //*************************DECLARACION DE FUNCIONES******************************************************************** */
 function oprimir_btn(i) {
+
   if (suspender_botones) {
     return;
   }
@@ -55,6 +56,11 @@ function oprimir_btn(i) {
   // console.log("after -> preg_incorrectas: " + preguntas_incorrectas)
   // console.log("---------------------")
   if (posibles_respuestas[i] == pregunta.respuesta) {
+    if (preguntas_correctas < 14) {
+      let acierto = new Audio();
+      acierto.src = "audio/acierto.mp3";
+      acierto.play();
+    }
     //true para pruebas 
     preguntas_correctas++;
     btn_correspondiente[i].style.background = "#99e599";
@@ -87,6 +93,11 @@ function oprimir_btn(i) {
       recorrerTop();
     }
   } else {
+    if (preguntas_incorrectas < 4) {
+      let incorrecto = new Audio();
+      incorrecto.src = "audio/error.mp3";
+      incorrecto.play();
+    }
     preguntas_incorrectas++;
     btn_correspondiente[i].style.background = "#ff8cbb";
     if (preguntas_incorrectas >= 5) {
@@ -249,6 +260,9 @@ function VolverJugar() {
 /*//! *********VENTANA EMERGENTE*************************************************************************************/
 
 function msjPerdiste() {
+  let perdiste = new Audio();
+  perdiste.src = "audio/perder.mp3";
+  perdiste.play();
   select_id("pregunta-encabezado").style.display = "none";
   ocultar();
   close = document.getElementById("btn_cerrar2");
@@ -271,6 +285,9 @@ function msjPerdiste() {
 }
 
 function msjGanaste(er) {
+  let ganaste = new Audio();
+  ganaste.src = "audio/win.mp3";
+  ganaste.play();
   select_id("pregunta-encabezado").style.display = "none";
   ocultar();
   select_id("div_btn_oculto").style.display = "flex";

@@ -6,6 +6,10 @@ let close;
 let cantidadTarjetas = 16; //16
 const nick = sessionStorage.getItem("nombre");
 let arrayUsuarios = [];
+// var sonido = new Audio();
+// sonido.src = "audio/pop.mp3";
+
+
 
 generarTablero();
 
@@ -23,6 +27,10 @@ function cargarIconos() {
 }
 
 function generarTablero() {
+
+  let barajear = new Audio();
+  barajear.src = "audio/barajear.mp3";
+  barajear.play();
   limpiarPuntaje();
   cargarIconos();
   selecciones = [];
@@ -31,7 +39,7 @@ function generarTablero() {
   for (let i = 0; i < cantidadTarjetas; i++) {
     tarjetas.push(`
         <div class="area-tarjeta" onclick="seleccionarTarjeta(${i})">
-            <div class="tarjeta" id="tarjeta${i}">
+            <div class="tarjeta" id="tarjeta${i}" >
                 <div class="cara trasera" id="trasera${i}">
                     ${iconos[0]}
                 </div>
@@ -51,6 +59,9 @@ function generarTablero() {
 
 function seleccionarTarjeta(i) {
   //donde {i} es igual al id de la class tarjeta
+  let sonido = new Audio();
+  sonido.src = "audio/pop.mp3";
+  sonido.play();
   let tarjeta = document.getElementById("tarjeta" + i);
   if (tarjeta.style.transform != "rotateY(180deg)") {
     tarjeta.style.transform = "rotateY(180deg)";
@@ -68,6 +79,12 @@ function deseleccionar(selecciones) {
     let trasera1 = document.getElementById("trasera" + selecciones[0]);
     let trasera2 = document.getElementById("trasera" + selecciones[1]);
     if (trasera1.innerHTML != trasera2.innerHTML) {
+
+      if (errores < 4) {
+        let incorrecto = new Audio();
+        incorrecto.src = "audio/error.mp3";
+        incorrecto.play();
+      }
       let tarjeta1 = document.getElementById("tarjeta" + selecciones[0]);
       let tarjeta2 = document.getElementById("tarjeta" + selecciones[1]);
       tarjeta1.style.transform = "rotateY(0deg)"; //Si son diferentes las voltea de regreso
@@ -79,9 +96,13 @@ function deseleccionar(selecciones) {
       if (errores >= 5) { //5 fijo //! 1 para pruebas
         select_id("tablero").setAttribute("hidden", "true");
         msjPerdiste();
-        // alert("Perdiste");
       }
     } else {
+      if (puntaje < 70) {
+        let acierto = new Audio();
+        acierto.src = "audio/acierto.mp3";
+        acierto.play();
+      }
       trasera1.style.background = "#A5FF70"; //Si son iguales pinta el fondo de la tarjeta de verde
       trasera2.style.background = "#A5FF70"; //Si son iguales pinta el fondo de la tarjeta de verde
       puntaje += 10;
@@ -97,6 +118,7 @@ function deseleccionar(selecciones) {
   }, 1000);
 }
 
+
 function select_id(id) {
   return document.getElementById(id);
 }
@@ -111,6 +133,9 @@ function limpiarPuntaje() {
 /*//! *********VENTANA EMERGENTE*************************************************************************************/
 
 function msjPerdiste() {
+  let perdiste = new Audio();
+  perdiste.src = "audio/perder.mp3";
+  perdiste.play();
   close = document.getElementById("btn_cerrar2");
   document.getElementById("p_msj-p").innerHTML = "Más suerte para la proxima";
   document.getElementById("modal_h1-p").innerHTML = "No completo el reto";
@@ -128,6 +153,9 @@ function msjPerdiste() {
 
 function msjGanaste(er) {
   // alert("Has ganado");
+  let ganaste = new Audio();
+  ganaste.src = "audio/win.mp3";
+  ganaste.play();
   close = document.getElementById("btn_cerrar");
   document
     .getElementById("section_contenedor-ganaste")
