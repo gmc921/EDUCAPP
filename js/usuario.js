@@ -35,13 +35,13 @@ const mostrarDatos = () => {
 if (jugar != null) {
     jugar.addEventListener("click", () => {
         if (quiz.checked) {
-            if (confirm("desea ver las intrucciones?")) {
+            if (confirm("¿Desea ver las intrucciones?")) {
                 vtnIntrucciones();
             } else {
                 document.location = "form_carrera.html";
             }
         } else if (memo.checked) {
-            if (confirm("desea ver las intrucciones?")) {
+            if (confirm("¿Desea ver las intrucciones?")) {
                 vtnIntrucciones();
             } else {
                 document.location = "form_memorama.html";
