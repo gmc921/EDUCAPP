@@ -59,11 +59,14 @@ function generarTablero() {
 
 function seleccionarTarjeta(i) {
   //donde {i} es igual al id de la class tarjeta
-  let sonido = new Audio();
-  sonido.src = "audio/pop.mp3";
-  sonido.play();
+  // let sonido = new Audio();
+  // sonido.src = "audio/pop.mp3";
+  // sonido.play();
   let tarjeta = document.getElementById("tarjeta" + i);
   if (tarjeta.style.transform != "rotateY(180deg)") {
+    let sonido = new Audio();
+    sonido.src = "audio/pop.mp3";
+    sonido.play();
     tarjeta.style.transform = "rotateY(180deg)";
     selecciones.push(i);
   }

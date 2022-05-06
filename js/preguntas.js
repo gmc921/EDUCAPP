@@ -144,7 +144,7 @@ function escogerPregunta(n) {
     pregunta = interprete_bp[n];
     select_id("dificultad").innerHTML = pregunta.dificultad;
     select_id("pregunta").innerHTML = pregunta.pregunta;
-    select_id("numero").innerHTML = n;
+    select_id("numero").innerHTML = (n + 1);
     //let pc = preguntas_correctas;
     if (preguntas_hechas > 1) {
       select_id(
