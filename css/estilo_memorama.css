@@ -199,9 +199,9 @@ div {
 .nuevo-juego {
   cursor: pointer;
   background: linear-gradient(rgb(46, 115, 180), rgb(39, 101, 126));
-  padding: 15px;
+  padding: 12px;
   width: 20vw;
-  border-radius: 40px;
+  border-radius: 35px;
   border: rgb(255, 255, 255) 5px solid;
   font-size: 130%;
   font-style: oblique;
