@@ -15,14 +15,14 @@ generarTablero();
 
 function cargarIconos() {
   iconos = [
-    '<img class="img-memoria" src="img/juego_memorama/Agustin_De_Iturbide.png" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Francisco_Javier_Mina.png" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Fusilamiento_Morales.png" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Guadalupe_Victoria.png" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/hidalgo_miguel.jpg" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Iganacio_Allende.png" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Morelos.jpg" alt="">',
-    '<img class="img-memoria" src="img/juego_memorama/Vicente_Guerrero.png" alt="">',
+    '<img class="img-memoria" src="img/juego_memorama/Agustin_De_Iturbide.png" alt="">', //0-1
+    '<img class="img-memoria" src="img/juego_memorama/Francisco_Javier_Mina.png" alt="">', //2-3
+    '<img class="img-memoria" src="img/juego_memorama/Fusilamiento_Morales.png" alt="">',  //4-5
+    '<img class="img-memoria" src="img/juego_memorama/Guadalupe_Victoria.png" alt="">', //6-7
+    '<img class="img-memoria" src="img/juego_memorama/hidalgo_miguel.jpg" alt="">',  //8-9
+    '<img class="img-memoria" src="img/juego_memorama/Iganacio_Allende.png" alt="">',  //10-11
+    '<img class="img-memoria" src="img/juego_memorama/Morelos.jpg" alt="">',  //12-13
+    '<img class="img-memoria" src="img/juego_memorama/Vicente_Guerrero.png" alt="">',  //14-15
   ];
 }
 
@@ -69,6 +69,7 @@ function seleccionarTarjeta(i) {
     sonido.play();
     tarjeta.style.transform = "rotateY(180deg)";
     selecciones.push(i);
+    NombreTarjeta(i);
   }
   if (selecciones.length == 2) {
     deseleccionar(selecciones);
@@ -119,6 +120,42 @@ function deseleccionar(selecciones) {
     }
 
   }, 1000);
+}
+
+function NombreTarjeta(numTarj) {
+  let personaje = new Audio();
+  if (numTarj == 0 || numTarj == 1) {
+    personaje.src = "audio/memorama/agustin.mp3";
+    personaje.play();
+  }
+  if (numTarj == 2 || numTarj == 3) {
+    personaje.src = "audio/memorama/JavierMina.mp3";
+    personaje.play();
+  }
+  if (numTarj == 4 || numTarj == 5) {
+    personaje.src = "audio/memorama/fusilamiento.mp3";
+    personaje.play();
+  }
+  if (numTarj == 6 || numTarj == 7) {
+    personaje.src = "audio/memorama/GuadalupeVictoria.mp3";
+    personaje.play();
+  }
+  if (numTarj == 8 || numTarj == 9) {
+    personaje.src = "audio/memorama/Hidalgo.mp3";
+    personaje.play();
+  }
+  if (numTarj == 10 || numTarj == 11) {
+    personaje.src = "audio/memorama/Allende.mp3";
+    personaje.play();
+  }
+  if (numTarj == 12 || numTarj == 13) {
+    personaje.src = "audio/memorama/Morelos.mp3";
+    personaje.play();
+  }
+  if (numTarj == 14 || numTarj == 15) {
+    personaje.src = "audio/memorama/Guerrero.mp3";
+    personaje.play();
+  }
 }
 
 

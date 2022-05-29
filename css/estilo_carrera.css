@@ -84,7 +84,6 @@ body {
 
 /*<------------------------------Section_PUNTAJE------------------------------------------------------------------------------>*/
 .section_puntaje {
-  
   min-width: auto;
   height: 40px;
   display: flex;
@@ -106,8 +105,10 @@ body {
 }
 /*<------------------------------Article------------------------------------------------------------------------------>*/
 .container {
+  /* border: 2px solid red; */
   display: flex;
-  height: 84vh;
+  padding-top: 10px;
+  /* height: 84vh; */
   width: 86vw;
   margin: auto;
 }

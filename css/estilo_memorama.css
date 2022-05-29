@@ -87,15 +87,6 @@ body {
   opacity: 0.85;
 }
 @media screen and (max-width: 973px) {
-
-  /* .encabezado {
-    display: none;
-  }
-
-  .encabezado-2 {
-    display: block;
-  } */
-
   .nav-menu,
   .nav-conTematico,
   .nav-cerrarSesion {
@@ -120,6 +111,8 @@ body {
   margin-top: 20vh;
   margin-left: 6.5vw;
   text-align: center;
+  transition-property: margin-left;
+  transition-duration: 0.5s;
 }
 .section-puntaje-puntos {
   display: block;
@@ -150,6 +143,8 @@ body {
   text-align: center;
   font-family: calibri;
   background: linear-gradient(rgb(129, 200, 221), rgb(190, 180, 230));
+  transition-property: width;
+  transition-duration: 0.5s;
 }
 
 div {
@@ -163,7 +158,7 @@ div {
   width: var(--w);
   min-width: 100px;
   height: var(--h);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   margin-right: 15px;
 }
 
@@ -182,7 +177,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .trasera {
@@ -199,7 +194,7 @@ div {
 .nuevo-juego {
   cursor: pointer;
   background: linear-gradient(rgb(46, 115, 180), rgb(39, 101, 126));
-  padding: 12px;
+  padding: 10px;
   width: 20vw;
   border-radius: 35px;
   border: rgb(255, 255, 255) 4px solid;
@@ -302,5 +297,19 @@ div {
   0%,
   100% {
     transform: rotateY(0deg);
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .section-tablero{
+    width: 79%;
+    transition-property: width;
+    transition-duration: 0.5s;
+  }
+
+  .section-puntaje {
+    margin-left: 0vw;
+    transition-property: margin-left;
+    transition-duration: 0.5s;
   }
 }

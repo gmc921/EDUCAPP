@@ -27,6 +27,7 @@ const mostrarDatos = () => {
     let nick = document.querySelector('.caja-usuario_input--text').value.trim();
     let pass = document.getElementById("pass").value.trim();
     arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'));
+    let cont = 0;
     if (arrayUsuarios === null) {
         alert("Usuario inexistente");
     } else {
@@ -35,10 +36,12 @@ const mostrarDatos = () => {
                 //console.log("logeado");
                 sessionStorage.setItem("nombre", nick);
                 document.location = "form_menu_usuario.html";
-            } else {
-                alert("Usuario o contraseña incorrectos");
+                cont++;
             }
         });
+        if (cont === 0) {
+            alert("Usuario o contraseña incorrectos");
+        }
     }
 }
 
