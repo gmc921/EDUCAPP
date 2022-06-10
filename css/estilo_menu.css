@@ -17,8 +17,8 @@ body {
   padding: 5px;
   text-align: center;
   display: grid;
-  grid-template-columns: minmax(100px, 250px) minmax(200px, 1fr) minmax(100px, 250px);
-  grid-template-rows: repeat(2, 40px);
+  grid-template-columns: minmax(50px, 100px) minmax(200px, 1fr) minmax(50px, 100px);
+  grid-template-rows: repeat(2, 20px);
   grid-template-areas:
     "logo letra dacity"
     "logo letra dacity";
@@ -58,8 +58,6 @@ body {
 
 img {
   height: 100%;
-  width: 75%;
-  object-fit: cover;
 }
 
 .nav-menu,
@@ -71,36 +69,24 @@ img {
   text-decoration: none;
   padding: 3px;
   margin: auto 10px;
-  border-radius: 6.5px;
 }
 .nav-menu:hover,
 .nav-conTematico:hover,
 .nav-cerrarSesion:hover {
   background: linear-gradient(#6fe66f, #b9fab9);
+  border-radius: 6.5px;
   opacity: 0.85;
 }
 
-@media screen and (max-width: 973px) {
 
-  /* .encabezado {
+@media screen and (max-width: 675px) {
+  
+  .nav-menu,
+  .nav-conTematico{
     display: none;
   }
-
-  .encabezado-2 {
-    display: block;
-  } */
-
-  .nav-menu,
-  .nav-conTematico,
-  .nav-cerrarSesion {
-    font-size: 1.1rem;
-    padding: 0;
-    text-decoration: none;
-    margin: 0;
-    border-radius: 6.5px;
-  }
-
 }
+
 
 /* ?<------------------------------Article------------------------------------------------------------------------------>*/
 .grid-container {
@@ -120,6 +106,12 @@ img {
   margin: 1rem 3rem 3rem;
   text-align: center;
 }
+.icon{
+  height: 100%;
+  width: 75%;
+  object-fit: cover;
+}
+
 /* ?<------------------------------Section-informacion------------------------------------------------------------------------------>*/
 
 .section-info__div {

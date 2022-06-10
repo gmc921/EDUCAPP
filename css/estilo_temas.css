@@ -30,8 +30,8 @@ article {
   grid-area: head;
   font-family: Georgia, "Times New Roman", Times, serif;
   display: grid;
-  grid-template-columns: minmax(100px, 250px) minmax(200px, 1fr) minmax(100px, 250px);
-  grid-template-rows: repeat(2, 40px);
+  grid-template-columns: minmax(50px, 100px) minmax(200px, 1fr) minmax(50px, 100px);
+  grid-template-rows: repeat(2, 20px);
   grid-template-areas:
       "logo letra dacity"
       "logo letra dacity";
@@ -95,8 +95,6 @@ article {
 
 .img-logos {
   height: 100%;
-  width: 75%;
-  object-fit: cover;
 }
 
 

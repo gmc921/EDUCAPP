@@ -18,8 +18,8 @@ body {
   padding: 5px;
   text-align: center;
   display: grid;
-  grid-template-columns: minmax(100px, 250px) minmax(200px, 1fr) minmax(100px, 250px);
-  grid-template-rows: repeat(2, 40px);
+  grid-template-columns: minmax(50px, 100px) minmax(200px, 1fr) minmax(50px, 100px);
+  grid-template-rows: repeat(2, 20px);
   grid-template-areas:
     "logo letra dacity"
     "logo letra dacity";
@@ -61,8 +61,6 @@ body {
 
 .img-logos {
   height: 100%;
-  width: 75%;
-  object-fit: cover;
 }
 .nav-menu,
 .nav-conTematico,
@@ -329,15 +327,12 @@ body {
 /*! ***************RESPONSIVE DESIGN***************************************************************/
 @media screen and (max-width: 1050px) {
 
-  /* .encabezado {
-    display: none;
-  }
-
-  .encabezado-2 {
-    display: block;
-  } */
   .btnR {
     height: 6vw;
+  }
+
+  .nav-menu{
+    display: none;
   }
 
   .nav-menu,
@@ -345,9 +340,7 @@ body {
   .nav-cerrarSesion {
     font-size: 1.1rem;
     padding: 0;
-    text-decoration: none;
-    margin: 0;
-    border-radius: 6.5px;
+    margin: 0 2px; 
   }
 
   .div_img_arboles{
