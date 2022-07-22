@@ -1,5 +1,5 @@
 //? ******************************VARIABLES*******************************************
-const nick = sessionStorage.getItem("nombre");
+const nick = sessionStorage.getItem("usuario");
 let cerrarSesion = document.querySelector(".nav-cerrarSesion");
 // let pntosCarrera = 0;
 // let pntosMemoria = 0;
@@ -7,15 +7,43 @@ let quiz = document.querySelector("#input-quiz");
 let memo = document.querySelector("#input-memoria");
 let jugar = document.getElementById("btn-jugar");
 
+
 //! ******************************CERRAR SESION*******************************************
 cerrarSesion.addEventListener("click", () => {
-    sessionStorage.removeItem("nombre");
+    sessionStorage.removeItem("usuario");
 })
 //! ******************************MOSTRAR DATOS DE USUARIO*********************************
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarDatos();
+document.addEventListener('DOMContentLoaded', () => { //?terminado
+    const dbUsuarios = indexedDB.open("BD", 1);
+
+    dbUsuarios.addEventListener("success", () => {
+        mostrarDatos();
+    })
+
+    const mostrarDatos = () => {
+        const dataBD = getIDBData("readonly");
+        const cursor = dataBD.openCursor(nick);
+        cursor.addEventListener("success", () => {
+            if (cursor.result) {
+                document.getElementById("datos").innerHTML = `<p id="nombre">Usuario: <b>${nick}</b></p>
+                            <p id="carrera">Puntos Carrera: <b>${cursor.result.value.pntosCarrera} puntos</b></p>
+                            <p id="memorama">Puntos Memorama:  <b>${cursor.result.value.pntosMemoria} puntos</b></p>`;
+            }
+        })
+    }
+
+    const getIDBData = (tipo) => {
+        const bd = dbUsuarios.result;
+        const bdTransaction = bd.transaction("usuario", tipo);
+        const objectStore = bdTransaction.objectStore("usuario");
+        // bdTransaction.addEventListener("complete", () => {
+        //     console.log(msj);
+        // })
+        return objectStore;
+    }
 });
 
+/* //!muestra los datos utilizando sessionStorage
 const mostrarDatos = () => {
     arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'));
     if (arrayUsuarios === null) {
@@ -29,7 +57,7 @@ const mostrarDatos = () => {
             }
         });
     }
-}
+}*/
 
 //! ******************************REDIRECCIONAR A JUEGO*********************************
 if (jugar != null) {

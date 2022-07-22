@@ -26,8 +26,8 @@ let recorreTop = 10.3;
 let recorreLeft = 2.6;
 //let erroneas = 0;
 let close;
-const nick = sessionStorage.getItem("nombre");
-let arrayUsuarios = [];
+const nick = sessionStorage.getItem("usuario");
+//let arrayUsuarios = [];
 
 let pregunta;
 let posibles_respuestas;
@@ -42,6 +42,13 @@ npreguntas = [];
 let preguntas_hechas = 0;
 let preguntas_correctas = 0;
 let preguntas_incorrectas = 0;
+
+
+const dbUsuarios = indexedDB.open("BD", 1);
+var pass;
+var pntosCarrera;
+var pntosMemoria;
+var objeto;
 //*************************DECLARACION DE FUNCIONES******************************************************************** */
 function oprimir_btn(i) {
 
@@ -277,7 +284,7 @@ function msjPerdiste() {
   select_id("div_msj_oculto").style.backgroundColor = "#FF5B5B";
 
   close.addEventListener("click", () => {
-    salvarPuntaje(nick);
+    registrarPuntos();
     document
       .getElementById("section_contenedor-perdiste")
       .classList.remove("mostrar");
@@ -310,7 +317,7 @@ function msjGanaste(er) {
   document.getElementById("modal_h1-g").innerHTML = "Reto completado";
 
   close.addEventListener("click", () => {
-    salvarPuntaje(nick);
+    registrarPuntos();
     document
       .getElementById("section_contenedor-ganaste")
       .classList.remove("mostrar");
@@ -326,30 +333,81 @@ mq.addEventListener("change", () => {
 
 })
 //! *****************************GUARDAR DATOS DE PARTIDA ************************************
+dbUsuarios.addEventListener("success", () => {
+  infoUsuario();
+})
 
-const salvarPuntaje = (user) => {
-  let indice;
-  arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'));
-  arrayUsuarios.forEach((elemento, index) => {
-    if (elemento.nom_usuario === user) {
-      indice = index;
-      //console.log(indice);
-      if (arrayUsuarios[indice].pntosCarrera === "N/A") {
-        arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
-      } else if (arrayUsuarios[indice].pntosCarrera <= preguntas_correctas) {
-        arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
-      }
-
-      //arrayUsuarios[indice].pntosMemoria = 20;
+const infoUsuario = () => {
+  const dataBD = getIDBData("readonly");
+  const cursor = dataBD.openCursor(nick);
+  cursor.addEventListener("success", () => {
+    if (cursor.result) {
+      pass = cursor.result.value.contrasena;
+      pntosCarrera = cursor.result.value.pntosCarrera;
+      pntosMemoria = cursor.result.value.pntosMemoria;
     }
-  });
-  //console.log(arrayUsuarios[indice]);
-  registrarPuntos();
+  })
 }
 
 const registrarPuntos = () => {
-  localStorage.setItem('usuarios', JSON.stringify(arrayUsuarios));
+
+  if (pntosCarrera === "N/A") {
+    pntosCarrera = preguntas_correctas;//puntaje
+  } else if (pntosCarrera <= preguntas_correctas) {
+    pntosCarrera = preguntas_correctas;
+  }
+
+  let objeto = info(nick, pass, pntosCarrera, pntosMemoria);
+  const dataBD = getIDBData("readwrite", "modificado correctamente");
+  dataBD.put(objeto);
 }
+
+const getIDBData = (tipo, msj) => {
+  const bd = dbUsuarios.result;
+  const bdTransaction = bd.transaction("usuario", tipo);
+  const objectStore = bdTransaction.objectStore("usuario");
+  bdTransaction.addEventListener("complete", () => {
+    console.log(msj);
+  })
+  return objectStore;
+}
+
+const info = (nom_usuario, contrasena, pntosCarrera, pntosMemoria) => {
+
+  let datos = {
+    usuario: nom_usuario,
+    contrasena: contrasena,
+    pntosCarrera: pntosCarrera,
+    pntosMemoria: pntosMemoria,
+  }
+  //arrayUsuarios.push(datos);
+  return datos;
+}
+
+//! Metodo para guardar datos en localStorage
+// const salvarPuntaje = (user) => {
+//   let indice;
+//   arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'));
+//   arrayUsuarios.forEach((elemento, index) => {
+//     if (elemento.nom_usuario === user) {
+//       indice = index;
+//       //console.log(indice);
+//       if (arrayUsuarios[indice].pntosCarrera === "N/A") {
+//         arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
+//       } else if (arrayUsuarios[indice].pntosCarrera <= preguntas_correctas) {
+//         arrayUsuarios[indice].pntosCarrera = preguntas_correctas;
+//       }
+
+//       //arrayUsuarios[indice].pntosMemoria = 20;
+//     }
+//   });
+//   //console.log(arrayUsuarios[indice]);
+//   registrarPuntos();
+// }
+
+// const registrarPuntos = () => {
+//   localStorage.setItem('usuarios', JSON.stringify(arrayUsuarios));
+// }
 
 //! ******************************CERRAR SESION*******************************************
 let cerrarSesion = document.querySelector(".nav-cerrarSesion");

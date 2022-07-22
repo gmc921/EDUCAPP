@@ -4,11 +4,10 @@ let puntaje = 0;
 let errores = 0;
 let close;
 let cantidadTarjetas = 16; //16
-const nick = sessionStorage.getItem("nombre");
-let arrayUsuarios = [];
+const nick = sessionStorage.getItem("usuario");
+//let arrayUsuarios = [];
 // var sonido = new Audio();
 // sonido.src = "audio/pop.mp3";
-
 
 
 generarTablero();
@@ -184,7 +183,7 @@ function msjPerdiste() {
     .classList.add("mostrar");
 
   close.addEventListener("click", () => {
-    salvarPuntaje(nick);
+    registrarPuntos(nick);
     document
       .getElementById("section_contenedor-perdiste")
       .classList.remove("mostrar");
@@ -211,7 +210,7 @@ function msjGanaste(er) {
   document.getElementById("modal_h1").innerHTML = "Reto completado";
 
   close.addEventListener("click", () => {
-    salvarPuntaje(nick);
+    registrarPuntos();
     document
       .getElementById("section_contenedor-ganaste")
       .classList.remove("mostrar");
@@ -219,6 +218,66 @@ function msjGanaste(er) {
 }
 //! *****************************GUARDAR DATOS DE PARTIDA ************************************
 
+const dbUsuarios = indexedDB.open("BD", 1);
+var pass;
+var pntosCarrera;
+var pntosMemoria;
+var objeto;
+
+dbUsuarios.addEventListener("success", () => {
+  infoUsuario();
+})
+
+
+const infoUsuario = () => {
+  const dataBD = getIDBData("readonly");
+  const cursor = dataBD.openCursor(nick);
+  cursor.addEventListener("success", () => {
+    if (cursor.result) {
+      pass = cursor.result.value.contrasena;
+      pntosCarrera = cursor.result.value.pntosCarrera;
+      pntosMemoria = cursor.result.value.pntosMemoria;
+    }
+  })
+}
+
+const registrarPuntos = () => {
+
+  if (pntosMemoria === "N/A") {
+    pntosMemoria = puntaje;//puntaje
+  } else if (pntosMemoria <= puntaje) {
+    pntosMemoria = puntaje;
+  }
+
+  let objeto = info(nick, pass, pntosCarrera, pntosMemoria);
+  const dataBD = getIDBData("readwrite", "modificado correctamente");
+  dataBD.put(objeto);
+}
+
+const getIDBData = (tipo, msj) => {
+  const bd = dbUsuarios.result;
+  const bdTransaction = bd.transaction("usuario", tipo);
+  const objectStore = bdTransaction.objectStore("usuario");
+  bdTransaction.addEventListener("complete", () => {
+    console.log(msj);
+  })
+  return objectStore;
+}
+
+const info = (nom_usuario, contrasena, pntosCarrera, pntosMemoria) => {
+
+  let datos = {
+    usuario: nom_usuario,
+    contrasena: contrasena,
+    pntosCarrera: pntosCarrera,
+    pntosMemoria: pntosMemoria,
+  }
+  //arrayUsuarios.push(datos);
+  return datos;
+}
+
+
+/* //!Metodo para registrar datos en almacenamiento localStorage
 const salvarPuntaje = (user) => {
   let indice;
   arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -242,11 +301,11 @@ const salvarPuntaje = (user) => {
 const registrarPuntos = () => {
   localStorage.setItem('usuarios', JSON.stringify(arrayUsuarios));
   // mostrarDatos();
-}
+}*/
 
 // EditarDB(nick);
 //! ******************************CERRAR SESION*******************************************
 let cerrarSesion = document.querySelector(".nav-cerrarSesion");
 cerrarSesion.addEventListener("click", () => {
-  sessionStorage.removeItem("nombre");
+  sessionStorage.removeItem("usuario");
 })

@@ -1,4 +1,4 @@
-const nick = sessionStorage.getItem("nombre");
+const nick = sessionStorage.getItem("usuario");
 
 if (nick != null) {
     let nav = document.querySelector(".div_navegacion");
@@ -10,7 +10,7 @@ if (nick != null) {
 
     let cerrarSesion = document.querySelector(".nav-cerrarSesion");
     cerrarSesion.addEventListener("click", () => {
-        sessionStorage.removeItem("nombre");
+        sessionStorage.removeItem("usuario");
     });
 
 } else {
